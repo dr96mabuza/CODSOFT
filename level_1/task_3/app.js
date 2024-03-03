@@ -33,11 +33,15 @@ const calculator = () => {
     }
 
     /**
-     * 
+     * Multifplication function, multiplies two numbers and return the result.
+     * eg multiplication(1, 3) returns 3.
      * @param {Number} num1 
      * @param {Number} num2 
+     * @returns {Number}
      */
-    const multiplication = (num1, num2) => {}
+    const multiplication = (num1, num2) => {
+        return num1 * num2;
+    }
 
     return {addition, multiplication, division, subtraction}
 }
