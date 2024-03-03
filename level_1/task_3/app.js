@@ -1,10 +1,12 @@
 const calculator = () => {
     /**
-     * 
+     * Addition function takes only two whole numbers and return the sum.
      * @param {Number} num1 
      * @param {Number} num2 
      */
-    const addition = (num1, num2) => {}
+    const addition = (num1, num2) => {
+        return Number(num1) + Number(num2);
+    }
 
     /**
      * 
