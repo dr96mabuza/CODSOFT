@@ -9,11 +9,13 @@ const calculator = () => {
     }
 
     /**
-     * 
+     * Subtraction function takes in two numbers and returns the difference.
      * @param {Number} num1 
      * @param {Number} num2 
      */
-    const subtraction = (num1, num2) => {}
+    const subtraction = (num1, num2) => {
+        return num1 - num2;
+    }
     /**
      * 
      * @param {Number} num1 
