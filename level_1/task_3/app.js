@@ -45,3 +45,4 @@ const calculator = () => {
 
     return {addition, multiplication, division, subtraction}
 }
+
