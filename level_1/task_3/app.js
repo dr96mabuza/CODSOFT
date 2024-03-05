@@ -46,3 +46,15 @@ const calculator = () => {
     return {addition, multiplication, division, subtraction}
 }
 
+const screen = document.querySelector("#screen");
+const calcButtons = document.querySelectorAll(".calculatorButton");
+calcButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        screen.textContent += button.value;
+    })
+})
+
+const equalButton = document.getElementById("equalsOperator");
+equalButton.addEventListener("click", () => {
+    // screen.textContent.split()
+})
