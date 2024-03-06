@@ -50,11 +50,21 @@ const screen = document.querySelector("#screen");
 const calcButtons = document.querySelectorAll(".calculatorButton");
 calcButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        screen.textContent += button.value;
+        if (screen.textContent === "0") {
+            screen.textContent = button.textContent;
+        // }else if ((screen.textContent.endsWith("-") || screen.textContent.endsWith("/") || screen.textContent.endsWith("+") || screen.textContent.endsWith("*")) && (button.textContent === "+" || button.textContent === "-" || button.textContent === "*" || button.textContent === "/")) {
+        //     screen.textContent.replace(screen.textContent.split("")[-1], button.textContent) 
+        } else {
+            screen.textContent += button.textContent;
+        }
+        
     })
 })
 
-const equalButton = document.getElementById("equalsOperator");
+const equalButton = document.querySelector("#equalsOperator");
 equalButton.addEventListener("click", () => {
-    // screen.textContent.split()
+    const foo = screen.textContent.split("");
+    if (isNaN(foo[0]) || isNaN(foo[2])) {
+        screen.textContent = "Error";
+    }
 })
