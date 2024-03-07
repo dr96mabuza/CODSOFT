@@ -7,7 +7,7 @@ const calculator = () => {
      * @returns {Number}
      */
     const addition = (num1, num2) => {
-        return Number(num1) + Number(num2);
+        return num1 + num2;
     }
 
     /**
@@ -46,7 +46,29 @@ const calculator = () => {
     return {addition, multiplication, division, subtraction}
 }
 
+/**
+ * 
+ * @param {Number} num1 
+ * @param {Number} num2 
+ * @param {String} operator 
+ * @returns {Any}
+ */
+const calculate = (num1, num2, operator) => {
+    if (operator === "/") {
+        return calculator().division(num1, num2)
+    } else if (operator === "*") {
+        return calculator().multiplication(num1, num2)
+    } else if (operator === "-") {
+        return calculator().subtraction(num1, num2)
+    } else if (operator === "+") {
+        return calculator().addition(num1, num2)
+    } else {
+        return "Error";
+    }
+}
+
 const screen = document.querySelector("#screen");
+const resultScreen = document.querySelector("#resultScreen")
 const calcButtons = document.querySelectorAll(".calculatorButton");
 calcButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -61,10 +83,21 @@ calcButtons.forEach((button) => {
     })
 })
 
+const splitEquation = (equation) => {
+    if (condition) {
+        
+    }
+}
+
 const equalButton = document.querySelector("#equalsOperator");
 equalButton.addEventListener("click", () => {
-    const foo = screen.textContent.split("");
-    if (isNaN(foo[0]) || isNaN(foo[2])) {
-        screen.textContent = "Error";
+    if (screen.textContent.length > 2) {
+        const foo = splitEquation(screen.textContent)
+        console.log(foo)
+        if (foo.length === 3 && (isNaN(foo[0]) || isNaN(foo[2]))) {
+            screen.textContent = "Error";
+        } else if (foo.length === 3 && (!isNaN(foo[0]) && !isNaN(foo[2]))) {
+            resultScreen.textContent = calculate(Number(foo[0], foo[2], foo[1]))
+        }
     }
 })
