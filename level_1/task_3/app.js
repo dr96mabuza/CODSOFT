@@ -83,17 +83,33 @@ calcButtons.forEach((button) => {
     })
 })
 
+/**
+ * 
+ * @param {String} equation 
+ */
 const splitEquation = (equation) => {
-    if (condition) {
-        
+    if (equation.includes("+") && equation.split("+").length === 3) {
+        console.log(equation)
+        return equation.split("+");
+    }
+    if (equation.includes("/") && equation.split("/").length === 3) {
+        return equation.split("/");
+    }
+    if (equation.includes("*") && equation.split("*").length === 3) {
+        return equation.split("*");
+    }
+    if (equation.includes("-") && equation.split("-").length === 3) {
+        return equation.split("-");
     }
 }
 
 const equalButton = document.querySelector("#equalsOperator");
 equalButton.addEventListener("click", () => {
     if (screen.textContent.length > 2) {
+
+    console.log(screen.textContent)
         const foo = splitEquation(screen.textContent)
-        console.log(foo)
+        // console.log(screen.textContent.length)
         if (foo.length === 3 && (isNaN(foo[0]) || isNaN(foo[2]))) {
             screen.textContent = "Error";
         } else if (foo.length === 3 && (!isNaN(foo[0]) && !isNaN(foo[2]))) {
