@@ -51,7 +51,7 @@ const calculator = () => {
  * @param {Number} num1 
  * @param {Number} num2 
  * @param {String} operator 
- * @returns {Any}
+ * @returns {Number}
  */
 const calculate = (num1, num2, operator) => {
     if (operator === "/") {
@@ -62,8 +62,6 @@ const calculate = (num1, num2, operator) => {
         return calculator().subtraction(num1, num2)
     } else if (operator === "+") {
         return calculator().addition(num1, num2)
-    } else {
-        return "Error";
     }
 }
 
@@ -88,27 +86,28 @@ calcButtons.forEach((button) => {
  * @param {String} equation 
  * @returns {String[]}
  */
-const splitEquation = (equation) => {
+const equationToList = (equation) => {
     // console.log(equation)
     if (equation.includes("+")) {
-        return equation.split("+").push("+");
+        return equation.replace("+", " + ").split(" ");
     }
     if (equation.includes("/")) {
-        return equation.split("/").push("/");
+        return equation.replace("/", " / ").split(" ");
     }
     if (equation.includes("*")) {
-        return equation.split("*").push("*");
+        return equation.replace("*", " * ").split(" ");
     }
     if (equation.includes("-")) {
-        return equation.split("-").push("-");
+        return equation.replace("-", " - ").split(" ");
     }
 }
 
 const equalButton = document.querySelector("#equalsOperator");
 equalButton.addEventListener("click", () => {
     try {
-        const equationList = splitEquation(screen.textContent)
-        resultScreen.textContent = calculate(Number(equationList[0]), Number(equationList[1]), foo[2])
+        const equationList = equationToList(screen.textContent)
+        resultScreen.textContent = calculate(Number(equationList[0]), Number(equationList[2]), equationList[1])
+        screen.textContent = "0";
     } catch (error) {
         screen.textContent = "Error";
     }
