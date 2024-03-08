@@ -43,6 +43,7 @@ nav > ul > li {
 nav > ul > li:hover {
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 #sel {
@@ -57,6 +58,7 @@ nav > ul > li:hover {
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 #hero {
@@ -88,6 +90,7 @@ nav > ul > li:hover {
 
 .service {
     position: relative;
+    cursor: pointer;
 }
 
 .service > div {
@@ -113,6 +116,7 @@ button {
     /* border: none; */
     background:none;
     color: white;
+    cursor: pointer;
 }
 
 #hero p, #hero h2, #hero h4, #sel p, #sel h5 {
