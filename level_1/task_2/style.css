@@ -1,3 +1,15 @@
+html {
+    width: 100vw;
+}
+
+section {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
 header {
     display: flex;
     flex-direction: row;
@@ -21,4 +33,21 @@ nav > ul {
 #sel {
     display: flex;
     flex-direction: row;
+    background-image: linear-gradient(to right, orange , purple);
+}
+
+#hero {
+    background-image: url("./asserts/images/cherrydeck-UpsEF48wAgk-unsplash.jpg");
+    height: 250px; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero > div > div :first-child, #about_us > div > button {
+    background-image: linear-gradient(to right, orange , purple);
+}
+
+.service > div > img {
+    background-image: linear-gradient(to right, orange , purple);
 }
