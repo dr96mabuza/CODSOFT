@@ -1,9 +1,10 @@
-html {
+body {
     width: 100vw;
 }
 
 section {
     width: 100%;
+    padding-top: 12px;
 }
 
 img {
@@ -22,6 +23,10 @@ header > div {
     flex-direction: row;
 }
 
+header > div > img {
+    width: 50px;
+}
+
 nav > ul {
     display: flex;
     flex-direction: row;
@@ -36,6 +41,14 @@ nav > ul {
     background-image: linear-gradient(to right, orange , purple);
 }
 
+#sel > div > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
 #hero {
     background-image: url("./asserts/images/cherrydeck-UpsEF48wAgk-unsplash.jpg");
     height: 250px; 
@@ -48,6 +61,52 @@ nav > ul {
     background-image: linear-gradient(to right, orange , purple);
 }
 
+#our_services > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    
+}
+
 .service > div > img {
     background-image: linear-gradient(to right, orange , purple);
+}
+
+.service > div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: solid black 1px;
+    width: fit-content;
+    padding: 0px 10px 0px 10px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 20px;
+    /* border: none; */
+    background:none;
+    color: white;
+}
+
+#hero p, #hero h2, #hero h4, #sel p, #sel h5 {
+    color: white;
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+    border: solid white 1px;
+    border-radius: 20px;
+    padding: 5px;
+    fill: white;
+}
+
+#about_us {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 10px;
 }
