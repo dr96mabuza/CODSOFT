@@ -1,5 +1,10 @@
 body {
-    width: 100vw;
+    width: 100%;
+    margin: 0;
+}
+
+section > * {
+    padding-left: 100px;
 }
 
 section {
@@ -84,8 +89,12 @@ nav > ul > li:hover {
     
 }
 
+.service > div {
+    background-image: linear-gradient(to right, orange , white);
+}
+
 .service > div > img {
-    background-image: linear-gradient(to right, orange , purple);
+    border-radius: 15px;
 }
 
 .service {
@@ -129,11 +138,23 @@ button {
     border: solid white 1px;
     border-radius: 20px;
     padding: 5px;
-    fill: white;
+    filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(5%) hue-rotate(267deg) brightness(101%) contrast(102%);
 }
 
 #about_us {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 10px;
+}
+
+#about_us > * {
+    padding-left: 0%;
+}
+
+#about_us > div {
+    padding-left: 100px;
+}
+
+#search > img {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(219deg) brightness(99%) contrast(101%);
 }
