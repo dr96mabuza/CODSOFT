@@ -86,34 +86,30 @@ calcButtons.forEach((button) => {
 /**
  * 
  * @param {String} equation 
+ * @returns {String[]}
  */
 const splitEquation = (equation) => {
-    if (equation.includes("+") && equation.split("+").length === 3) {
-        console.log(equation)
-        return equation.split("+");
+    // console.log(equation)
+    if (equation.includes("+")) {
+        return equation.split("+").push("+");
     }
-    if (equation.includes("/") && equation.split("/").length === 3) {
-        return equation.split("/");
+    if (equation.includes("/")) {
+        return equation.split("/").push("/");
     }
-    if (equation.includes("*") && equation.split("*").length === 3) {
-        return equation.split("*");
+    if (equation.includes("*")) {
+        return equation.split("*").push("*");
     }
-    if (equation.includes("-") && equation.split("-").length === 3) {
-        return equation.split("-");
+    if (equation.includes("-")) {
+        return equation.split("-").push("-");
     }
 }
 
 const equalButton = document.querySelector("#equalsOperator");
 equalButton.addEventListener("click", () => {
-    if (screen.textContent.length > 2) {
-
-    console.log(screen.textContent)
-        const foo = splitEquation(screen.textContent)
-        // console.log(screen.textContent.length)
-        if (foo.length === 3 && (isNaN(foo[0]) || isNaN(foo[2]))) {
-            screen.textContent = "Error";
-        } else if (foo.length === 3 && (!isNaN(foo[0]) && !isNaN(foo[2]))) {
-            resultScreen.textContent = calculate(Number(foo[0], foo[2], foo[1]))
-        }
+    try {
+        const equationList = splitEquation(screen.textContent)
+        resultScreen.textContent = calculate(Number(equationList[0]), Number(equationList[1]), foo[2])
+    } catch (error) {
+        screen.textContent = "Error";
     }
 })
