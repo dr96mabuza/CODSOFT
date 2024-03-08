@@ -33,6 +33,16 @@ nav > ul {
     list-style: none;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+
+nav > ul > li {
+    padding: 5px;
+}
+
+nav > ul > li:hover {
+    background-color: black;
+    color: white;
 }
 
 #sel {
@@ -61,6 +71,10 @@ nav > ul {
     background-image: linear-gradient(to right, orange , purple);
 }
 
+#our_services {
+    margin-bottom: 30px;
+}
+
 #our_services > div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -72,16 +86,25 @@ nav > ul {
     background-image: linear-gradient(to right, orange , purple);
 }
 
+.service {
+    position: relative;
+}
+
 .service > div {
     display: flex;
     flex-direction: row;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    border: solid black 1px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /* border: solid black 1px; */
     width: fit-content;
     padding: 0px 10px 0px 10px;
+    position: absolute;
+    bottom: -5%;
+    right: 0%;
+    background-color: white;
 }
 
 button {
