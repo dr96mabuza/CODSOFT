@@ -94,7 +94,7 @@ nav > ul > li:hover {
 }
 
 .service > div > img {
-    border-radius: 15px;
+    border-radius: 25px;
 }
 
 .service {
@@ -155,6 +155,10 @@ button {
     padding-left: 100px;
 }
 
+#search {
+    background-color: black;
+}
 #search > img {
-    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(219deg) brightness(99%) contrast(101%);
+    border: none;
+    /* filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(219deg) brightness(99%) contrast(101%); */
 }
