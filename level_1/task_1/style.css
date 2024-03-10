@@ -25,6 +25,7 @@ nav > ul {
 
 section ,footer {
     padding: 30px;
+    padding-right: 50px;
 }
 
 section > h2 {
@@ -80,7 +81,7 @@ nav > ul > li:hover {
     /* height: 300px; */
     justify-content: center;
     align-items: center;
-
+    gap: 30px;
     height: 100vh;
 }
 
@@ -129,7 +130,8 @@ button {
     cursor: pointer;
 }
 
-#about > div > div button:hover {
+#about > div > div button:hover,
+form button:hover {
     background-color: white;
 }
 
@@ -222,16 +224,20 @@ form div:first-child > div {
     margin-top: 20px;
 }
 
+form button {
+    background-color: orange;
+}
+
 /*footer styling*/
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     margin-top: 50px;
     gap: 20px;
     border-top: solid black 1px;
     margin-left: 30px;
-    margin-right: 30px;
+    margin-right: 50px;
     padding-top: 30px;
 }
 
@@ -241,4 +247,23 @@ footer > div > p:first-child {
 
 footer > div > p {
     padding: 3px;
+}
+
+#followMe > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding-left: 5px;
+}
+
+footer > div:last-child > p {
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+footer > div:last-child > p:last-child,
+footer > div:last-child > p:last-child > a {
+    font-size: x-small;
 }
