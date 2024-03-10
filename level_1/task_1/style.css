@@ -160,6 +160,7 @@ button {
 .resumeItem {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    margin-bottom: 3vw;
 }
 
 .position {
@@ -170,4 +171,49 @@ button {
     display: grid;
     grid-column-start: 1;
     grid-column-end: 2;
+}
+
+/*contact styling*/
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#contact > div > div > div {
+    margin-top: 30px;
+}
+
+#contact > div > div > div :first-child {
+    font-weight: bolder;
+}
+
+form div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+form div:first-child > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#message > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#message {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
 }
