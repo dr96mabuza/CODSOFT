@@ -1,6 +1,7 @@
 * {
     margin: 0%;
     padding: 0%;
+    font-size: 16px;
 }
 
 html {
@@ -20,6 +21,11 @@ nav > ul {
 
 section ,footer {
     padding: 10px;
+}
+
+section > h2 {
+    font-size: 6vw;
+    font-weight: bolder;
 }
 
 /* header styling */
@@ -123,3 +129,45 @@ button {
     background-color: white;
 }
 
+/*projects styling*/
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 15vh;
+    gap: 5vw;
+}
+
+.project > div > h2 {
+    margin-bottom: 20px;
+}
+
+.project > img {
+    height: 30vw;
+    border: solid black 1px;
+}
+
+#resume {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#resume > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.resumeItem {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.position {
+    font-weight: bolder;
+}
+
+.description {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
