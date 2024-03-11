@@ -164,6 +164,25 @@ form button:hover {
     grid-template-columns: 1fr 1fr;
 }
 
+#resume > div > h3 {
+    font-size: xx-large;
+}
+
+.separation {
+    border-bottom: solid black 1px;
+}
+
+#skills > ul {
+    list-style:square;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#skills > ul > li {
+    padding: 6px;
+    grid-column-start: 2;
+}
+
 .resumeItem {
     display: grid;
     grid-template-columns: 1fr 2fr;
