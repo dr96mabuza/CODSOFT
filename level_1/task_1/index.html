@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="'https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,9 +16,9 @@
         </div>
         <nav>
             <ul>
-                <li>Resume</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <li onClick="document.getElementById('resume').scrollIntoView({behavior: 'smooth'});">Resume</li>
+                <li onClick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'});">Projects</li>
+                <li onClick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Contact</li>
             </ul>
         </nav>
     </section>
@@ -28,9 +29,9 @@
             <p>A bit about me</p>
             <p>Software developer. <br> Node.js, React, Python, Java and other developer tools and libraries.</p>
             <div>
-                <button>Resume</button>
-                <button>Projects</button>
-                <button>Contact</button>
+                <button onClick="document.getElementById('resume').scrollIntoView({behavior: 'smooth'});">Resume</button>
+                <button onClick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'});">Projects</button>
+                <button onClick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Contact</button>
             </div>
         </div>
     </section>
@@ -127,7 +128,7 @@
             <div>
                 <div class="resumeItem">
                     <p class="duration">December 2013</p>
-                    <p class="position">Phumlani Secondary School | Grade 12 NQF 5</p>
+                    <p class="position">Phumlani Secondary School | Grade 12 NQF 4</p>
                     <p class="description">Mathematics and Physical sciences stream.</p>
                 </div>
             </div>
